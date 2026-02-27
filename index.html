@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Color Scheme Generator</title>
+</head>
+<body>
+    <main>
+        <h1>Color Scheme Generator</h1>
+        <form class="color-picker">
+            <input type="color" id="base-color" name="base-color" value="#ff0000">
+            <select id="scheme-type" name="scheme-type">
+                <option value="monochrome" selected>Monochrome</option>
+                <option value="monochrome-light">Monochrome-light</option>
+                <option value="monochrome-dark">Monochrome-dark</option>
+                <option value="complement">Complement</option>
+                <option value="analogic">Analogic</option>
+                <option value="analogic-complement">Analogic-complement</option>
+                <option value="triad">Triad</option>
+            </select>
+            <button id="generate-btn" type="submit">Get scheme</button>
+        </form>
+        <div class="color-scheme" id="color-scheme">
+        </div>
+    </main>
+    <div class="copied-message" id="copied-message">
+        <p>Color code copied to clipboard!</p>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,2 +1,1 @@
-Color Scheme Generator.
-[API](https://www.thecolorapi.com/)
+Using [this](https://www.thecolorapi.com/) API.
