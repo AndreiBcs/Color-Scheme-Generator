@@ -1,6 +1,5 @@
 const baseColor = document.getElementById('base-color');
 const schmeType = document.getElementById('scheme-type');
-const generateBtn = document.getElementById('generate-btn');
 const colorContainer = document.getElementById('color-scheme');
 const copiedMsg = document.getElementById('copied-message');
 
@@ -8,9 +7,10 @@ window.onload = () => {
     getColorScheme();
 }
 
-generateBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    getColorScheme();
+document.addEventListener('change', (e) => {
+    if (e.target === baseColor || e.target === schmeType) {
+        getColorScheme();
+    }
 });
 
 document.addEventListener('keydown', (e) => {
@@ -27,7 +27,7 @@ document.addEventListener("click", (e) => {
                 copiedMsg.style.opacity = '1';
                 setTimeout(() => {
                     copiedMsg.style.opacity = '0';
-                }, 2000);
+                }, 1000);
             })
             .catch(err => console.error('Error copying to clipboard:', err));
     }

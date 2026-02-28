@@ -26,6 +26,11 @@ main{
     margin: 12em auto;
     box-shadow: 0 0 10px #000000;
 }
+@media (max-width: 768px) {
+    main{
+        margin: 8em auto;
+    }
+}
 .color-picker{
     display: flex;
     gap: 10px;
@@ -51,15 +56,6 @@ main{
 option{
     background: #1b263b;
     color: #e0e1dd;
-}
-#generate-btn{
-    padding: 10px;
-    background: #1b263b;
-    color: #e0e1dd;
-    border: 1px solid #e0e1dd;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
 }
 .color-scheme{
     display: grid;
